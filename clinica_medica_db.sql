@@ -23,7 +23,6 @@ VALUES
   ('77745806972', '75983416685', 'Neymar Junior', 'rua Pelé', 'neymar10@gmail.com'),
   ('44454891572', '21980135566', 'Vinicius Junior', 'rua Nazario', 'vinijr20@outlook.com');
 
-
 INSERT INTO tbl_medico (CRM_medico, especialidade_medico, nome_medico)
 VALUES
   ('923456789', 'Generalista', 'Paulo Muzy'),
@@ -66,7 +65,6 @@ VALUES
 ('202', 369.00, '44454891572'),
 ('203', 375.00, '88854867572');
 
-
 CREATE TABLE tbl_consulta(
   ID_consulta smallint primary key not null,
   data_consulta date,
@@ -83,16 +81,13 @@ VALUES
   (13, '2022-12-31', 'arritmia', 'atenolol','88854867572', '789123456'),
   (14, '2022-05-25', 'virose', 'benegrip','44454891572', '923456789');
 
-
 SELECT nome_cliente AS Clientes_Gmail, CPF_cliente 
 FROM tbl_cliente
 WHERE email_cliente  like '%gmail.com';
 
-
 SELECT nome_cliente  AS Clientes_sem_Gmail, CPF_cliente
 FROM tbl_cliente
 WHERE email_cliente not like '%gmail.com';
-
 
 SELECT nome_cliente, telefone_cliente
 FROM tbl_cliente
@@ -117,7 +112,6 @@ FROM tbl_particular
 INNER JOIN tbl_cliente
 ON tbl_particular.CPF_cliente_particular = tbl_cliente.CPF_cliente
 WHERE tbl_particular.valor_particular < '375.00';
-
 
 SELECT tbl_particular.ID_particular, tbl_cliente.nome_cliente
 FROM tbl_particular
